@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Tahlili</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .btn.disabled {
+            background-color: gray;
+        }
+        #status {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #task-area {
+            display: flex;
+            flex-direction: column;
+        }
+        #task-area input, #task-area button {
+            margin: 5px 0;
+        }
+        #task-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Vazifalar va Stress Darajasi Tahlili</h2>
+
+        <div id="task-area">
+            <input type="number" id="task-time" placeholder="Vazifa bajarish vaqti (soniyalarda)">
+            <input type="number" id="task-errors" placeholder="Xatolar soni">
+            <button class="btn" id="add-task-btn">Vazifani qo'shish</button>
+        </div>
+
+        <div id="task-list"></div>
+        <div id="status"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
